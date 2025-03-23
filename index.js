@@ -17,14 +17,14 @@ const app = express();
 app.use(express.json());
 app.use(express.static('public'));
 app.use(cors({
-    origin: 'https://gestion-courrier-app.onrender.com/',
+    origin: 'https://gestion-courrier-app.onrender.com',
     credentials: true
 }));
 
 const server = http.createServer(app);
 const io = new Server(server, {
     cors:{
-        origin:'https://gestion-courrier-app.onrender.com/',
+        origin:'https://gestion-courrier-app.onrender.com',
         credentials:true,
         methods:["GET","POST"]
     }
