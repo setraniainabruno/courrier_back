@@ -17,14 +17,14 @@ const app = express();
 app.use(express.json());
 app.use(express.static('public'));
 app.use(cors({
-    origin: '*',
+    origin: 'http://localhost:3725',
     credentials: true
 }));
 
 const server = http.createServer(app);
 const io = new Server(server, {
     cors:{
-        origin:'*',
+        origin:'http://localhost:3725',
         credentials:true,
         methods:["GET","POST"]
     }
