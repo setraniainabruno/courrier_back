@@ -1,4 +1,4 @@
 node_modules
-.env
 public\fichiers
 .vercel
+config.bat
