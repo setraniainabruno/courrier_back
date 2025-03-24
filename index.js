@@ -13,20 +13,22 @@ const emailRoutes = require('./routes/emailRoute');
 const notificationRoutes = require('./routes/notificationRoute');
 
 const app = express();
+const url = '*';
+// const url = 'https://gestion-courrier-app.onrender.com';
 
 app.use(express.json());
 app.use(express.static('public'));
 app.use(cors({
-    origin: 'https://gestion-courrier-app.onrender.com',
+    origin: url,
     credentials: true
 }));
 
 const server = http.createServer(app);
 const io = new Server(server, {
-    cors:{
-        origin:'https://gestion-courrier-app.onrender.com',
-        credentials:true,
-        methods:["GET","POST"]
+    cors: {
+        origin: url,
+        credentials: true,
+        methods: ["GET", "POST"]
     }
 });
 app.io = io;

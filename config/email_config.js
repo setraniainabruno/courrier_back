@@ -8,8 +8,8 @@ const transporter = nodemailer.createTransport({
     auth: {
         // user: 'hobysteeven@gmail.com ',
         // pass: 'qtlvhcgiydaskcrs'
-        user: 'driantsirabe@gmail.com',
-        pass: 'hwtqlwvdrnkzlsdm'
+        user: 'brunoharison18@gmail.com',
+        pass: 'jkunamshwujrvwfv'
     }
 });
 
